@@ -1,6 +1,7 @@
 {
-  "name": "butopen-web-components-tailwind-starter-kit",
-  "version": "1.0.1",
+  "name": "mauwi-wc",
+  "version": "0.0.0",
+  "author": "Maurice Wipf",
   "scripts": {
     "start": "vite dev --host",
     "dev": "vite dev --host",
