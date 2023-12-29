@@ -78,7 +78,6 @@
 
 <mauwi-map-overlay></mauwi-map-overlay>
 
-
 <div class="w-full h-[32rem]">
     <div class="bg-cover bg-center h-full" style="background-image: url('assets/map.png')" onclick="htmlMapOverlay.toggle()"></div>
 </div>
@@ -87,8 +86,65 @@
     htmlMapOverlay.isOpen = false;
 </script>
 
+<mauwi-quote-cards></mauwi-quote-cards>
+<script>
+    const htmlQuoteCards = document.getElementsByTagName("mauwi-quote-cards")?.item(0);
+    htmlQuoteCards.cards = [
+        {
+            "author": "Alice Johnson",
+            "text": "This product is absolutely phenomenal! It's transformed the way I work. I highly recommend it! This product is absolutely phenomenal! It's transformed the way I work. I highly recommend it!",
+            "date": "Nov 15, 2023"
+        },
+        {
+            "author": "Mark Thompson",
+            "text": "Incredible quality and performance. Worth every penny! Incredible quality and performance. Worth every penny!",
+            "date": "Oct 28, 2023"
+        },
+        {
+            "author": "Sarah Adams",
+            "text": "Couldn't be happier with my purchase. Highly recommended. Couldn't be happier with my purchase. Highly recommended.",
+            "date": "Sep 5, 2023"
+        },
+        {
+            "author": "Emily Davis",
+            "text": "This product exceeded my expectations. So impressed! This product exceeded my expectations. So impressed!",
+            "date": "Dec 3, 2023"
+        },
+        {
+            "author": "Michael Wilson",
+            "text": "The functionality of this product is unparalleled. It adapts to my needs perfectly. I'm thoroughly impressed! The functionality of this product is unparalleled. It adapts to my needs perfectly. I'm thoroughly impressed!",
+            "date": "Aug 10, 2023"
+        },
+        {
+            "author": "Sophia Garcia",
+            "text": "I'm blown away by how incredible this product is. It's user-friendly and efficient. A definite game-changer! I'm blown away by how incredible this product is. It's user-friendly and efficient. A definite game-changer!",
+            "date": "Jul 22, 2023"
+        },
+        /*{
+          "author": "Daniel Martinez",
+          "text": "Top-notch quality and performance. It's exceeded my highest expectations. I can't recommend it enough! Top-notch quality and performance. It's exceeded my highest expectations. I can't recommend it enough!",
+          "date": "Jun 18, 2023"
+        },
+        {
+          "author": "Olivia Clark",
+          "text": "The value this product adds is remarkable. It simplifies my tasks effortlessly. I'm extremely satisfied! The value this product adds is remarkable. It simplifies my tasks effortlessly. I'm extremely satisfied!",
+          "date": "May 9, 2023"
+        },
+        {
+          "author": "William Rodriguez",
+          "text": "An exceptional product that delivers on every promise. It's a true gem. Couldn't be happier with it! An exceptional product that delivers on every promise. It's a true gem. Couldn't be happier with it!",
+          "date": "Apr 1, 2023"
+        },
+        {
+          "author": "Ella Hernandez",
+          "text": "I'm absolutely thrilled with this product! It's exceeded all my expectations. A must-buy for everyone! I'm absolutely thrilled with this product! It's exceeded all my expectations. A must-buy for everyone!",
+          "date": "Mar 14, 2023"
+        }*/
+    ];
+</script>
 
 <script type="module" src="src/mega-flyout/mega-flyout.ts"></script>
 <script type="module" src="src/map-overlay/map-overlay.ts"></script>
+<script type="module" src="src/quote-cards/quote-cards.ts"></script>
 </body>
 </html>
