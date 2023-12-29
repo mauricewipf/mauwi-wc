@@ -1,6 +1,6 @@
 {
   "name": "@mauwi-org/mauwi-wc",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Maurice Wipf",
   "description": "Web components",
   "scripts": {
@@ -16,15 +16,15 @@
     "type": "git",
     "url": "https://bitbucket.org/mauwi1/mauwi-wc.git"
   },
+  "files": ["dist/"],
   "devDependencies": {
+    "@mauwi-org/mauwi-wc": "^0.0.0",
     "autoprefixer": "^10.4.12",
-    "postcss": "^8.4.18",
     "lit": "^2.4.0",
+    "postcss": "^8.4.18",
+    "sass": "^1.55.0",
     "tailwindcss": "^3.2.0",
     "typescript": "^4.8.4",
-    "vite": "^3.1.8",
-    "sass": "^1.55.0"
-  },
-  "dependencies": {
+    "vite": "^3.1.8"
   }
 }
