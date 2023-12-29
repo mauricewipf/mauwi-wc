@@ -1,7 +1,8 @@
 {
-  "name": "mauwi-wc",
+  "name": "@mauwi-org/mauwi-wc",
   "version": "0.0.0",
   "author": "Maurice Wipf",
+  "description": "Web components",
   "scripts": {
     "start": "vite dev --host",
     "dev": "vite dev --host",
@@ -10,6 +11,10 @@
     "generate-tailwind": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailwind.min.css --minify --watch",
     "serve-dist": "npx http-server ./dist -o",
     "publish": "npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/mauwi1/mauwi-wc.git"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",
