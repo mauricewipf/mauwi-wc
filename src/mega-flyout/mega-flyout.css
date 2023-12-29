@@ -1,0 +1,20 @@
+.mega-flyout {
+  @apply flex flex-col text-gray-900 items-end z-10 font-sans relative;
+}
+
+.mega-flyout.open .menu-container {
+  @apply flex flex-col items-start bg-white p-4 shadow-lg absolute right-0 top-10;
+}
+
+.menu-container {
+  @apply hidden;
+}
+
+@tailwind base;
+
+@layer base {
+  a { }
+}
+
+@tailwind components;
+@tailwind utilities;
