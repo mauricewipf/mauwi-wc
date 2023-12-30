@@ -2,8 +2,6 @@
 import {defineConfig} from "vite";
 
 export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
-    const temp = process.env;
-    console.log('process.env ', process.env );
     if (command === 'serve') {
         return {
             // dev specific config
@@ -12,15 +10,15 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
         // command === 'build'
         return {
             // build specific config
-            root: 'src',
+            root: '',
             build: {
-                outDir: './dist2',
-                emptyOutDir: true,
+                outDir: './dist',
                 rollupOptions: {
+                    input: 'src/index.ts',
                     output: {
-                        entryFileNames: `assets/[name].js`,
-                        chunkFileNames: `assets/[name].js`,
-                        assetFileNames: `assets/[name].[ext]`
+                        entryFileNames: `[name].js`,
+                        chunkFileNames: `[name].js`,
+                        assetFileNames: `[name].[ext]`
                     }
                 }
             }
