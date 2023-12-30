@@ -10,6 +10,7 @@
     "lint": "eslint src --fix",
     "generate-tailwind": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailwind.min.css --minify --watch",
     "serve-dist": "npx http-server ./dist -o",
+    "serve-landingpage": "npx http-server -o /landingpage.html",
     "publish": "npm publish --access public"
   },
   "repository": {
@@ -20,7 +21,7 @@
     "dist/"
   ],
   "devDependencies": {
-    "@mauwi-org/mauwi-wc": "^0.0.0",
+    "@mauwi-org/mauwi-wc": "^0.0.2",
     "autoprefixer": "^10.4.12",
     "lit": "^2.4.0",
     "postcss": "^8.4.18",
