@@ -1,6 +1,6 @@
 {
   "name": "@mauwi-org/mauwi-wc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Maurice Wipf",
   "description": "Web components",
   "scripts": {
@@ -14,9 +14,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/mauwi1/mauwi-wc.git"
+    "url": "git+https://bitbucket.org/mauwi1/mauwi-wc.git"
   },
-  "files": ["dist/"],
+  "files": [
+    "dist/"
+  ],
   "devDependencies": {
     "@mauwi-org/mauwi-wc": "^0.0.0",
     "autoprefixer": "^10.4.12",
