@@ -11,7 +11,9 @@
     "generate-tailwind": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailwind.min.css --minify --watch",
     "serve-dist": "npx http-server ./dist -o",
     "serve-landingpage": "npx http-server -o /landingpage.html",
-    "publish": "npm publish --access public"
+    "publish": "npm publish --access public",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "repository": {
     "type": "git",
@@ -22,10 +24,18 @@
   ],
   "devDependencies": {
     "@mauwi-org/mauwi-wc": "^0.0.3",
+    "@storybook/addon-essentials": "^7.6.6",
+    "@storybook/addon-links": "^7.6.6",
+    "@storybook/blocks": "^7.6.6",
+    "@storybook/web-components": "^7.6.6",
+    "@storybook/web-components-vite": "^7.6.6",
     "autoprefixer": "^10.4.12",
     "lit": "^2.4.0",
     "postcss": "^8.4.18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sass": "^1.55.0",
+    "storybook": "^7.6.6",
     "tailwindcss": "^3.2.0",
     "typescript": "^4.8.4",
     "vite": "^3.1.8"
