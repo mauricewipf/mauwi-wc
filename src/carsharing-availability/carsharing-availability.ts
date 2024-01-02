@@ -3,6 +3,8 @@ import {html} from "lit";
 import {customElement, property} from "lit/decorators.js";
 import {TailwindElement} from "../shared/tailwind.element";
 import style from "./carsharing-availability.css?inline";
+import "./dual-slider/dual-slider";
+import "./weekdays-checkboxes/weekdays-checkboxes";
 
 export interface CarsharingAvailabilityProps {
   headline: string;
@@ -72,7 +74,7 @@ export class CarsharingAvailability extends TailwindElement(style) {
       <div class="font-sans flex">
         <div class="bg-white rounded-lg shadow-lg p-4">
           <h2 class="text-xl font-semibold pb-2">${this.headline}</h2>
-          ${this.renderWeekdaysCheckboxes(this.weekdays)}
+          <mauwi-weekdays-checkboxes weekdays="${this.weekdays}"></mauwi-weekdays-checkboxes>
           <mauwi-dual-slider hours=${this.hours}></mauwi-dual-slider>
 <!--          <xy-chart></xy-chart>-->
           <div class="flex justify-start py-2">

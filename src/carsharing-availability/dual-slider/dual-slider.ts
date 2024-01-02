@@ -16,16 +16,6 @@ export class DualSlider extends TailwindElement(null) {
   @state() range1Value: number = 12;
   @state() range2Value: number = 19;
 
-  handleRange1Change(event: Event) {
-    const inputElement = event.target as HTMLInputElement;
-    this.range1Value = parseFloat(inputElement.value);
-  }
-
-  handleRange2Change(event: Event) {
-    const inputElement = event.target as HTMLInputElement;
-    this.range2Value = parseFloat(inputElement.value);
-  }
-
   handleMinInputChange(event: Event) {
     const inputElement = event.target as HTMLInputElement;
     this.minValue = parseFloat(inputElement.value);
@@ -52,7 +42,7 @@ export class DualSlider extends TailwindElement(null) {
                         max="24"
                         step="1"
                         value=${this.minValue.toString()}
-                        @click="${(event) => this.handleMinInputChange(event)}"
+                        @click="${this.handleMinInputChange}"
                         class="w-1/2 h-8 p-2 bg-gray-200 rounded-lg text-gray-700"
                 />
                 <span class="ms-3">End:</span>
@@ -62,7 +52,7 @@ export class DualSlider extends TailwindElement(null) {
                         max="24"
                         step="1"
                         value=${this.maxValue.toString()}
-                        @click="${(event) => this.handleMaxInputChange(event)}"
+                        @click="${this.handleMaxInputChange}"
                         class="w-1/2 h-8 p-2 bg-gray-200 rounded-lg text-gray-700"
                 />
             </div>
