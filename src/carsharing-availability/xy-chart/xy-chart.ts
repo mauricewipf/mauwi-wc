@@ -3,7 +3,7 @@ import {customElement} from "lit/decorators.js";
 import {TailwindElement} from "../../shared/tailwind.element";
 
 @customElement(("mauwi-xy-chart"))
-export class XYChart extends TailwindElement(null) {
+export class XYChart extends TailwindElement() {
   @Element() el: HTMLElement;
   private xyChartDefinition = `xychart-beta
     title "Availability"

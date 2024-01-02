@@ -3,7 +3,7 @@ import {TailwindElement} from "../../shared/tailwind.element";
 import {customElement, property} from "lit/decorators.js";
 
 @customElement("mauwi-weekdays-checkboxes")
-export class WeekdaysCheckboxes extends TailwindElement(null) {
+export class WeekdaysCheckboxes extends TailwindElement() {
   @property()
   weekdays: string[];
 

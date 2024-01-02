@@ -15,7 +15,7 @@ export interface QuoteCard {
 }
 
 @customElement("mauwi-quote-cards")
-export class QuoteCards extends TailwindElement(null) {
+export class QuoteCards extends TailwindElement() {
   @property() cards: QuoteCard[];
 
   private renderQuoteCard({text, author, date}: QuoteCard) {

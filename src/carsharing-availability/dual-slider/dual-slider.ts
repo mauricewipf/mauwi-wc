@@ -8,7 +8,7 @@ export interface HoursProps {
 }
 
 @customElement("mauwi-dual-slider")
-export class DualSlider extends TailwindElement(null) {
+export class DualSlider extends TailwindElement() {
   @property() hours: HoursProps;
 
   @state() minValue: number = 0;
