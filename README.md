@@ -1,5 +1,14 @@
+# mauwi-wc (Web Components)
 
-# Tailwind web components starter kit
+## Installation
+
+TODO 
+
+## Integration
+
+TODO
+
+## Project based on: Tailwind web components starter kit
 
 This is a starter kit to develop web components using Tailwind CSS. 
 
@@ -9,7 +18,7 @@ We managed to find a way to make them work without hacks or weird tech: just com
 
 No dependencies, based on [lit-element](https://lit.dev/docs/).
 
-## How will you create a tailwind component?
+### How will you create a tailwind component?
 Here is a sample code:
 
 ```typescript
@@ -48,12 +57,12 @@ There are only two differences to a standard _LitElement_:
 
 A _TailwindElement_ extends a _LitElmement_ (see below) and adds the logic to integrate tailwind and your styles.
 
-## Get started
+### Get started
 
 To run the project:
-1) `pnpm install` (only the first time)
-2) `pnpm start` to run the server
-3) to develop the library, run `pnpm build` and copy the static assets where you need them.
+1) `npm install` (only the first time)
+2) `npm start` to run the server
+3) to develop the library, run `npm build` and copy the static assets where you need them.
 
 You may clone this repo and start developing your components by looking at the _test.component_ as reference.
 
@@ -68,10 +77,7 @@ As an alternative, and if you like to have control over every piece, do the foll
 
 That's all.
 
-
-
-
-## Show me the pieces
+### Show me the pieces
 If you want to understand how it works, it's simple:
 
 - the **package.json** integrates these technolgies:
@@ -111,12 +117,3 @@ The _style_ variable comes from your component, where it is imported from an ext
 Then it is combined with the default tailwind classes.
 
 If you add more components, the common parts are reused.
-
-## Who uses it?
-
-We developed this starter kit to implement a web session player for our open source SaaS [browserbot](https://browserbot.io/).
-
-If you want to contribute or share soem thoughts, just get in touch with us.
-
-Enjoy.
-
