@@ -18,9 +18,9 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
                         'index': 'src/index.ts',
                         'map-overlay': 'src/map-overlay/index.ts',
                         'mega-flyout': 'src/mega-flyout/index.ts',
-                        'multi-page-form': 'src/multi-page-form/multi-page-form.ts',
-                        'quote-cards': 'src/quote-cards/quote-cards.ts',
-                        'carsharing-availability': 'src/carsharing-availability/carsharing-availability.ts',
+                        'multi-page-form': 'src/multi-page-form/index.ts',
+                        'quote-cards': 'src/quote-cards/index.ts',
+                        'carsharing-availability': 'src/carsharing-availability/index.ts',
                     },
                     output: {
                         entryFileNames: `entry-[name].js`,
