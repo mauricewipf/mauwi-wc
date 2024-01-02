@@ -1,17 +1,21 @@
 import mermaid from 'mermaid';
-import {customElement} from "lit/decorators.js";
+import {customElement, state} from "lit/decorators.js";
+import {unsafeHTML} from 'lit/directives/unsafe-html.js';
 import {TailwindElement} from "../../shared/tailwind.element";
+import {html} from "lit";
 
 @customElement(("mauwi-xy-chart"))
 export class XYChart extends TailwindElement() {
-  @Element() el: HTMLElement;
+  @state() svg: string;
+
   private xyChartDefinition = `xychart-beta
     title "Availability"
     x-axis [SUN, MON, TUE, WED, THU, FRI, SAT]
     y-axis "Chance (in %)" 0 --> 100
     line [50, 60, 100, 100, 80, 55, 60]`;
 
-  componentDidLoad() {
+  connectedCallback() {
+    super.connectedCallback();
     mermaid.initialize({
       startOnLoad: true,
       xyChart: {
@@ -19,18 +23,13 @@ export class XYChart extends TailwindElement() {
         showTitle: false,
       }
     });
-  }
-
-  componentDidRender() {
-    if (this.el) {
-      mermaid.render('xy-chart', this.xyChartDefinition)
-        .then(({ svg }) => {
-          this.el.innerHTML = svg;
-        });
-    }
+    mermaid.render('xy-chart', this.xyChartDefinition)
+      .then(({ svg }) => {
+        this.svg = svg;
+      });
   }
 
   render() {
-    return null;
+    return html`${unsafeHTML(this.svg)}`;
   }
 }
