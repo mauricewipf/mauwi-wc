@@ -20,6 +20,7 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
                         'mega-flyout': 'src/mega-flyout/index.ts',
                         'multi-page-form': 'src/multi-page-form/multi-page-form.ts',
                         'quote-cards': 'src/quote-cards/quote-cards.ts',
+                        'carsharing-availability': 'src/carsharing-availability/carsharing-availability.ts',
                     },
                     output: {
                         entryFileNames: `entry-[name].js`,
