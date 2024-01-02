@@ -8,7 +8,7 @@ export default {
 
 // Useful: https://github.com/CodeByAlex/storybook-framework-boilerplate/blob/master/examples/framework-kitchen-sink/stories/button.stories.js#L13-L18
 const Template = (args: CarsharingAvailabilityProps) => {
-  const element: HTMLCarsharingAvailabilityElement = document.createElement('carsharing-availability');
+  const element: any = document.createElement('carsharing-availability');
   element.headline = args.headline;
   element.weekdays = args.weekdays;
   element.hours = args.hours;
@@ -23,5 +23,4 @@ Primary.args = {
     from: 7,
     to: 20
   },
-  chance: 'foo',
 };

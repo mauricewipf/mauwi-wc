@@ -1,5 +1,5 @@
 import {Meta, StoryObj} from '@storybook/html';
-import {MegaFlyout, MegaFlyoutProps} from "./mega-flyout";
+import {MegaFlyoutProps} from "./mega-flyout";
 
 export default {
   title: 'components/MegaFlyout',
@@ -18,7 +18,7 @@ export default {
 } satisfies Meta<MegaFlyoutProps>;
 
 const Template = (args: MegaFlyoutProps) => {
-  const element: HTMLElement = document.createElement('mauwi-mega-flyout');
+  const element: any = document.createElement('mauwi-mega-flyout');
   element.isOpen = args.isOpen;
   element.headline = args.headline;
   element.linkSections = args.linkSections;
