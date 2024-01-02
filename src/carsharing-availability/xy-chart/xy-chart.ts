@@ -24,7 +24,7 @@ export class XYChart extends TailwindElement() {
       }
     });
     mermaid.render('xy-chart', this.xyChartDefinition)
-      .then(({ svg }) => {
+      .then(({svg}) => {
         this.svg = svg;
       });
   }

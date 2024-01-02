@@ -2,7 +2,6 @@ import {HoursProps} from './dual-slider/dual-slider';
 import {html} from "lit";
 import {customElement, property} from "lit/decorators.js";
 import {TailwindElement} from "../shared/tailwind.element";
-import style from "./carsharing-availability.css?inline";
 import "./dual-slider/dual-slider";
 import "./weekdays-checkboxes/weekdays-checkboxes";
 import "./xy-chart/xy-chart";
@@ -14,7 +13,7 @@ export interface CarsharingAvailabilityProps {
 }
 
 @customElement("mauwi-carsharing-availability")
-export class CarsharingAvailability extends TailwindElement(style) {
+export class CarsharingAvailability extends TailwindElement() {
   @property() headline: string;
   @property() weekdays: string[];
   @property() hours: HoursProps;

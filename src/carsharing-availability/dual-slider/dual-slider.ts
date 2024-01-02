@@ -28,35 +28,35 @@ export class DualSlider extends TailwindElement() {
 
   render() {
     return html`
-        <div class="py-4">
-            <h3 class="text-l font-semibold">
-                Time
-            </h3>
-            <div class="flex justify-start">
-            </div>
-            <div class="flex justify-between items-center">
-                <span>Begin:</span>
-                <input
-                        type="number"
-                        min="0"
-                        max="24"
-                        step="1"
-                        value=${this.minValue.toString()}
-                        @click="${this.handleMinInputChange}"
-                        class="w-1/2 h-8 p-2 bg-gray-200 rounded-lg text-gray-700"
-                />
-                <span class="ms-3">End:</span>
-                <input
-                        type="number"
-                        min="0"
-                        max="24"
-                        step="1"
-                        value=${this.maxValue.toString()}
-                        @click="${this.handleMaxInputChange}"
-                        class="w-1/2 h-8 p-2 bg-gray-200 rounded-lg text-gray-700"
-                />
-            </div>
+      <div class="py-4">
+        <h3 class="text-l font-semibold">
+          Time
+        </h3>
+        <div class="flex justify-start">
         </div>
+        <div class="flex justify-between items-center">
+          <span>Begin:</span>
+          <input
+            type="number"
+            min="0"
+            max="24"
+            step="1"
+            value=${this.minValue.toString()}
+            @click="${this.handleMinInputChange}"
+            class="w-1/2 h-8 p-2 bg-gray-200 rounded-lg text-gray-700"
+          />
+          <span class="ms-3">End:</span>
+          <input
+            type="number"
+            min="0"
+            max="24"
+            step="1"
+            value=${this.maxValue.toString()}
+            @click="${this.handleMaxInputChange}"
+            class="w-1/2 h-8 p-2 bg-gray-200 rounded-lg text-gray-700"
+          />
+        </div>
+      </div>
     `;
   }
 }
