@@ -21,6 +21,7 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
                         'multi-page-form': 'src/multi-page-form/index.ts',
                         'quote-cards': 'src/quote-cards/index.ts',
                         'carsharing-availability': 'src/carsharing-availability/index.ts',
+                        'bar-chart': 'src/bar-chart/index.ts',
                     },
                     output: {
                         entryFileNames: `entry-[name].js`,

@@ -4,7 +4,7 @@ import {unsafeHTML} from 'lit/directives/unsafe-html.js';
 import {TailwindElement} from "../../shared/tailwind.element";
 import {html} from "lit";
 
-@customElement(("mauwi-xy-chart"))
+@customElement("mauwi-xy-chart")
 export class XYChart extends TailwindElement() {
   @state() svg: string;
 

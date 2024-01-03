@@ -1,6 +1,6 @@
 {
   "name": "@mauwi-org/mauwi-wc",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Maurice Wipf",
   "description": "Web components",
   "scripts": {
@@ -28,6 +28,7 @@
     "@storybook/blocks": "^7.6.6",
     "@storybook/web-components": "^7.6.6",
     "@storybook/web-components-vite": "^7.6.6",
+    "@tailwindcss/forms": "^0.5.7",
     "autoprefixer": "^10.4.12",
     "lit": "^2.4.0",
     "postcss": "^8.4.18",

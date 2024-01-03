@@ -155,11 +155,33 @@
     <mauwi-carsharing-availability headline="Temp"></mauwi-carsharing-availability>
 </div>
 
+<div style="padding: 15px">
+    <div>
+        <h2>Sales Revenue</h2>
+        <div>
+            <label for="price" class="block text-sm font-medium leading-6 text-gray-900">December Revenue</label>
+            <div class="relative mt-2 rounded-md shadow-sm">
+                <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                    <span class="text-gray-500 sm:text-sm">$</span>
+                </div>
+                <input type="text" name="price" id="price" onchange="updateBarChart(event)" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-12 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="0.00" aria-describedby="price-currency">
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                    <span class="text-gray-500 sm:text-sm" id="price-currency">USD</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <mauwi-bar-chart octoberRevenue=8500
+                     novemberRevenue=7000
+                     decemberRevenue=10000
+    ></mauwi-bar-chart>
+    <script>
+        function updateBarChart(event) {
+            document.getElementsByTagName("mauwi-bar-chart")[0]["decemberRevenue"]=event.target.value;
+        }
+    </script>
+</div>
 
-<script type="module" src="src/mega-flyout/mega-flyout.ts"></script>
-<script type="module" src="src/map-overlay/map-overlay.ts"></script>
-<script type="module" src="src/quote-cards/quote-cards.ts"></script>
-<script type="module" src="src/multi-page-form/multi-page-form.ts"></script>
-<script type="module" src="src/carsharing-availability/carsharing-availability.ts"></script>
+<script type="module" src="src/index.ts"></script>
 </body>
 </html>
