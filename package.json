@@ -9,7 +9,6 @@
     "build": "vite build",
     "lint": "eslint src --fix",
     "generate-tailwind": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailwind.min.css --minify --watch",
-    "serve-dist": "npx http-server ./dist -o",
     "publish": "npm publish --access public",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
