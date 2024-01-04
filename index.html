@@ -147,15 +147,15 @@
     ];
 </script>
 
-<div style="padding: 15px">
+<div class="p-5">
     <mauwi-multi-page-form></mauwi-multi-page-form>
 </div>
 
-<div style="padding: 15px">
+<div class="p-5">
     <mauwi-carsharing-availability headline="Temp"></mauwi-carsharing-availability>
 </div>
 
-<div style="padding: 15px">
+<div class="p-5">
     <div>
         <h2>Sales Revenue</h2>
         <div>
@@ -180,6 +180,18 @@
             document.getElementsByTagName("mauwi-bar-chart")[0]["decemberRevenue"]=event.target.value;
         }
     </script>
+</div>
+
+<div class="p-5">
+    <mauwi-personal-information-form></mauwi-personal-information-form>
+    <script>
+        document.getElementsByTagName("mauwi-personal-information-form")[0].addEventListener('submitted', (event) => {
+            document.getElementById("personal-information-form-output").innerText = JSON.stringify(event.target.data);
+        });
+    </script>
+    <pre class="flex mt-5 max-w-[30rem] shadow rounded-lg text-sm bg-blue-950 text-white">
+        <code id="personal-information-form-output" class="p-4 text-wrap">{}</code>
+    </pre>
 </div>
 
 <script type="module" src="src/index.ts"></script>
