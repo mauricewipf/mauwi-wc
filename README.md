@@ -2,11 +2,61 @@
 
 ## Installation
 
-TODO 
+`npm install`
+
+## How to create a new component
+
+1. Create a file "src/my-element/my-element.ts"
+2. Create a file "src/my-element/index.ts" with the content:
+
+```
+export { MyElement } from '/my-element';
+```
+
+3. Add to the file src/index.ts the following:
+
+```
+export { MyElement } from './my-element/my-element';
+```
+
+4. Use `mauwi-my-element` in index.html.
 
 ## Integration
 
-TODO
+### Via CDN
+
+```html
+<!-- HTML -->
+<script type="module" src="https://unpkg.com/@mauwi-org/mauwi-wc/dist/entry-index.js"></script>
+
+<!-- Or specify version -->
+<script type="module" src="https://unpkg.com/@mauwi-org/mauwi-wc@0.0.3/dist/entry-index.js"></script>
+
+<!-- Or load only specific web component -->
+<script type="module" src="https://unpkg.com/@mauwi-org/mauwi-wc/dist/entry-multi-page-form.js"></script>
+
+<!-- Finally use custom tag -->
+<mauwi-multi-page-form></mauwi-multi-page-form>
+```
+
+### Via NPM
+
+1. In Terminal or Console:
+
+`npm install @mauwi-org/mauwi-wc`
+
+2. In HTML
+
+```html
+<!-- HTML -->
+<script type="module" src="node_modules/@mauwi-org/mauwi-wc/dist/entry-index.js"></script>
+
+<!-- Or load only specific web component -->
+<script type="module" src="node_modules/@mauwi-org/mauwi-wc/dist/entry-multi-page-form.js"></script>
+
+<!-- Finally use custom tag -->
+<mauwi-multi-page-form></mauwi-multi-page-form>
+```
 
 ## Project based on: Tailwind web components starter kit
 
