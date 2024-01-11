@@ -24,7 +24,15 @@ export { MyElement } from './my-element/my-element';
 ## Publish
 
 1. `npm run build`
-2. `npm run publish`
+2. In dist/mermaid-934d9bea.js replace first string with second. This fixes 404 errors when loading scripts.
+
+```
+import("./xychartDiagram-f746c04c.js"),["xychartDiagram-f746c04c.js","createText-aebacdfe.js","init.js","ordinal.js","linear.js","line.js","array.js","path.js"]
+
+import("./xychartDiagram-f746c04c.js"),["dist/xychartDiagram-f746c04c.js","dist/createText-aebacdfe.js","dist/init.js","dist/ordinal.js","dist/linear.js","dist/line.js","dist/array.js","dist/path.js"]
+```
+
+3. `npm run publish`
 
 ## Integration
 
