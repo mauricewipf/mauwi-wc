@@ -1,7 +1,6 @@
 import {TailwindElement} from "../shared/tailwind.element";
 import {customElement, property, state} from "lit/decorators.js";
 import {html, PropertyValues} from "lit";
-import {unsafeHTML} from "lit/directives/unsafe-html.js";
 import mermaid from "mermaid";
 
 @customElement("mauwi-bar-chart")
@@ -10,7 +9,8 @@ export class BarChart extends TailwindElement() {
   @property() novemberRevenue: number = 7000;
   @property() decemberRevenue: number = 6000;
 
-  @state() svg: string;
+  private parser = new DOMParser();
+  @state() svg: HTMLElement;
 
   private getXyChartDefinition = (oct: number, nov: number, dec: number) => {
     return `xychart-beta
@@ -41,12 +41,12 @@ export class BarChart extends TailwindElement() {
       || _changedProperties.has('decemberRevenue')) {
       mermaid.render('xy-chart', this.getXyChartDefinition(this.octoberRevenue, this.novemberRevenue, this.decemberRevenue))
         .then(({svg}) => {
-          this.svg = svg;
+          this.svg = this.parser.parseFromString(svg, "image/svg+xml").documentElement;
         });
     }
   }
 
   render() {
-    return html`${unsafeHTML(this.svg)}`;
+    return html`${this.svg}`;
   }
 }

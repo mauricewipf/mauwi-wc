@@ -1,12 +1,12 @@
 import mermaid from 'mermaid';
 import {customElement, state} from "lit/decorators.js";
-import {unsafeHTML} from 'lit/directives/unsafe-html.js';
 import {TailwindElement} from "../../shared/tailwind.element";
 import {html} from "lit";
 
 @customElement("mauwi-xy-chart")
 export class XYChart extends TailwindElement() {
-  @state() svg: string;
+  private parser = new DOMParser();
+  @state() svg: HTMLElement;
 
   private xyChartDefinition = `xychart-beta
     title "Availability"
@@ -25,11 +25,11 @@ export class XYChart extends TailwindElement() {
     });
     mermaid.render('xy-chart', this.xyChartDefinition)
       .then(({svg}) => {
-        this.svg = svg;
+        this.svg = this.parser.parseFromString(svg, "image/svg+xml").documentElement;
       });
   }
 
   render() {
-    return html`${unsafeHTML(this.svg)}`;
+    return html`${this.svg}`;
   }
 }
