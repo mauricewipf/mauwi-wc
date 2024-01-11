@@ -28,7 +28,7 @@ export { MyElement } from './my-element/my-element';
 
 ## Integration
 
-### Via CDN
+### In HTML via CDN
 
 ```html
 <!-- HTML -->
@@ -44,7 +44,7 @@ export { MyElement } from './my-element/my-element';
 <mauwi-multi-page-form></mauwi-multi-page-form>
 ```
 
-### Via NPM
+### In NPM project via NPM
 
 1. In Terminal or Console:
 
@@ -61,6 +61,42 @@ export { MyElement } from './my-element/my-element';
 
 <!-- Finally use custom tag -->
 <mauwi-multi-page-form></mauwi-multi-page-form>
+```
+
+### In React project
+
+1. In Terminal or Console:
+
+`npm install @mauwi-org/mauwi-wc @lit/react`
+
+2. In JSX
+
+https://lit.dev/docs/frameworks/react/
+
+```jsx
+import React from 'react';
+import {createComponent} from '@lit/react';
+import {MauwiElement} from './mauwi-element.js';
+
+export const MauwiElementComponent = createComponent({
+  tagName: 'mauwi-element',
+  elementClass: MauwiElement,
+  react: React,
+  events: {
+    onactivate: 'activate',
+    onchange: 'change',
+  },
+});
+```
+
+3. Use React component
+
+```jsx
+<MauwiElementComponent
+  active={isActive}
+  onactivate={(e) => setIsActive(e.active)}
+  onchange={handleChange}
+/>
 ```
 
 ## Project based on: Tailwind web components starter kit
