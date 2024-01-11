@@ -41,7 +41,7 @@ export class CarsharingAvailability extends TailwindElement() {
 }
 
 declare global {
-  interface HTMLElementTagNameMap {
+  interface CarsharingAvailabilityMap {
     "mauwi-carsharing-availability": CarsharingAvailability;
   }
 }
