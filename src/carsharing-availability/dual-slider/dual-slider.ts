@@ -1,5 +1,5 @@
 import {html} from "lit";
-import {customElement, property, state} from "lit/decorators.js";
+import {customElement, property} from "lit/decorators.js";
 import {TailwindElement} from "../../shared/tailwind.element";
 
 export interface HoursProps {
@@ -11,19 +11,14 @@ export interface HoursProps {
 export class DualSlider extends TailwindElement() {
   @property() hours: HoursProps;
 
-  @state() minValue: number = 0;
-  @state() maxValue: number = 24;
-  @state() range1Value: number = 12;
-  @state() range2Value: number = 19;
-
-  handleMinInputChange(event: Event) {
+  handleStartInputChange(event: Event) {
     const inputElement = event.target as HTMLInputElement;
-    this.minValue = parseFloat(inputElement.value);
+    this.hours.from = parseFloat(inputElement.value);
   }
 
-  handleMaxInputChange(event: Event) {
+  handleEndInputChange(event: Event) {
     const inputElement = event.target as HTMLInputElement;
-    this.maxValue = parseFloat(inputElement.value);
+    this.hours.to = parseFloat(inputElement.value);
   }
 
   render() {
@@ -35,15 +30,15 @@ export class DualSlider extends TailwindElement() {
         <div class="flex justify-start">
         </div>
         <div class="flex justify-between items-center">
-          <span>Begin:</span>
+          <span>Start:</span>
           <input
             type="number"
             min="0"
             max="24"
             step="1"
-            value=${this.minValue.toString()}
-            @click="${this.handleMinInputChange}"
-            class="w-1/2 h-8 p-2 bg-gray-200 rounded-lg text-gray-700"
+            value=${this.hours?.from?.toString()}
+            @click="${this.handleStartInputChange}"
+            class="w-1/2 h-8 p-2 ml-2 rounded-lg text-gray-700"
           />
           <span class="ms-3">End:</span>
           <input
@@ -51,9 +46,9 @@ export class DualSlider extends TailwindElement() {
             min="0"
             max="24"
             step="1"
-            value=${this.maxValue.toString()}
-            @click="${this.handleMaxInputChange}"
-            class="w-1/2 h-8 p-2 bg-gray-200 rounded-lg text-gray-700"
+            value=${this.hours?.to?.toString()}
+            @click="${this.handleEndInputChange}"
+            class="w-1/2 h-8 p-2 ml-2 rounded-lg text-gray-700"
           />
         </div>
       </div>

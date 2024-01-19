@@ -24,7 +24,7 @@ export class CarsharingAvailability extends TailwindElement() {
         <div class="bg-white rounded-lg shadow-lg p-4">
           <h2 class="text-xl font-semibold pb-2">${this.headline}</h2>
           <mauwi-weekdays-checkboxes weekdays="${this.weekdays}"></mauwi-weekdays-checkboxes>
-          <mauwi-dual-slider hours=${this.hours}></mauwi-dual-slider>
+          <mauwi-dual-slider .hours=${this.hours}></mauwi-dual-slider>
           <mauwi-xy-chart></mauwi-xy-chart>
           <div class="flex justify-start py-2">
             <a href="#"

@@ -1,27 +1,28 @@
-import {Meta, StoryObj} from '@storybook/html';
 import {MultiPageFormProps} from "./multi-page-form";
+import {Meta, StoryObj} from "@storybook/web-components";
+import {html} from "lit";
+import "./multi-page-form"
 
 export default {
   title: 'components/MultiPageForm',
   tags: ['autodocs'],
+  render: (args) => html`
+    <mauwi-multi-page-form/>
+  `,
   parameters: {
     backgrounds: {
-      default: 'lightgrey',
+      default: 'darkgrey',
       values: [
         {
-          name: 'lightgrey',
-          value: '#f8f8f8',
+          name: 'darkgrey',
+          value: '#444',
         },
       ],
     },
   },
 } satisfies Meta<MultiPageFormProps>;
 
-const Template = (args: MultiPageFormProps) => {
-  const element: any = document.createElement('multi-page-form');
-  console.log(args)
-  return element;
+export const Default: StoryObj<MultiPageFormProps> = {
+  args: {
+  },
 };
-
-export const Primary: StoryObj<MultiPageFormProps> = Template.bind({});
-Primary.args = {};

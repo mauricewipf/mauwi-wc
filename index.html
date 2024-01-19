@@ -152,7 +152,10 @@
 </div>
 
 <div class="p-5">
-    <mauwi-carsharing-availability headline="Temp"></mauwi-carsharing-availability>
+    <mauwi-carsharing-availability headline="Temp" weekdays = "['MON', 'TUE', 'THU', 'SUN']"></mauwi-carsharing-availability>
+    <script>
+        document.getElementsByTagName("mauwi-carsharing-availability")[0].hours = {from: 7, to: 19};
+    </script>
 </div>
 
 <div class="p-5">
@@ -194,7 +197,7 @@
     </pre>
 </div>
 
-<!--<script type="module" src="src/index.ts"></script>-->
-<script type="module" src="dist/entry-index.js"></script>
+<script type="module" src="src/index.ts"></script>
+<!--<script type="module" src="dist/entry-index.js"></script>-->
 </body>
 </html>
