@@ -1,6 +1,6 @@
 {
   "name": "@mauwi-org/mauwi-wc",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": "Maurice Wipf",
   "description": "Web components",
   "scripts": {
