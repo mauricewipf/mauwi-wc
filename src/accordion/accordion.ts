@@ -38,9 +38,9 @@ export class Accordion extends TailwindElement() {
             <div class="pt-6">
               <dt>
                 <button type="button" class="flex w-full items-start justify-between text-left text-gray-900"
-                        aria-controls=${"faq-" + faq.id} aria-expanded="false">
+                        aria-controls=${"faq-" + faq.id} aria-expanded="false" @click=${() => this.toggle(faq.id)}>
                   <span class="text-base font-semibold leading-7">${faq.question}</span>
-                  <span class="ml-6 flex h-7 items-center" @click=${() => this.toggle(faq.id)}>
+                  <span class="ml-6 flex h-7 items-center">
                     ${faq.collapsed
                       ? plusIcon
                       : minusIcon}
