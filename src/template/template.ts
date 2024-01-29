@@ -16,3 +16,9 @@ export class Template extends TailwindElement() {
     `;
   }
 }
+
+declare global {
+  interface TemplateMap {
+    "mauwi-template": Template;
+  }
+}

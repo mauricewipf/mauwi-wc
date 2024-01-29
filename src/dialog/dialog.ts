@@ -112,3 +112,9 @@ export class Dialog extends TailwindElement() {
       </div>`;
   }
 }
+
+declare global {
+  interface DialogMap {
+    "mauwi-dialog": Dialog;
+  }
+}

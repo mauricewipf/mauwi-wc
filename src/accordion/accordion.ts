@@ -66,3 +66,9 @@ export class Accordion extends TailwindElement() {
       : {...faq}));
   }
 }
+
+declare global {
+  interface AccordionMap {
+    "mauwi-accordion": Accordion;
+  }
+}
