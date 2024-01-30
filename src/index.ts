@@ -7,3 +7,4 @@ export { BarChart } from './bar-chart/bar-chart';
 export { PersonalInformationForm } from './personal-information-form/personal-information-form';
 export { Accordion } from './accordion/accordion';
 export { Datepicker } from './datepicker/datepicker'
+export { Carousel } from './carousel/carousel';

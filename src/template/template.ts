@@ -12,7 +12,7 @@ export class Template extends TailwindElement() {
 
   protected render() {
     return html`
-      <div></div>
+      <div>Coming soon</div>
     `;
   }
 }
