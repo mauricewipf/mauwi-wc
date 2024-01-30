@@ -1,6 +1,6 @@
 {
   "name": "@mauwi-org/mauwi-wc",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "author": "Maurice Wipf",
   "description": "Web components",
   "scripts": {
@@ -42,6 +42,6 @@
     "vite": "^3.1.8"
   },
   "dependencies": {
-    "mermaid": "^10.6.1"
+    "mermaid": "^10.7.0"
   }
 }

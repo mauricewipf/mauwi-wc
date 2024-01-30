@@ -1,6 +1,7 @@
 import {customElement, property} from "lit/decorators.js";
 import {TailwindElement} from "../../shared/tailwind.element";
 import {html} from "lit";
+import "../../bar-chart/bar-chart"
 
 export interface DashboardProps {
 }
@@ -75,6 +76,9 @@ export class Dashboard extends TailwindElement() {
           <div class="basis-3/5 p-8 shadow-md rounded-xl border-1 border-gray-200 bg-white">
             <p class="text-lg font-bold">Overview</p>
             <p class="text-gray-500"></p>
+            <div class="mt-4">
+              <mauwi-bar-chart .height=${380} .yAxisTitle="${''}"></mauwi-bar-chart>
+            </div>
           </div>
 
           <div class="basis-2/5 p-8 shadow-md rounded-xl border-1 border-gray-200 bg-white">

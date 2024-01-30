@@ -2,22 +2,43 @@ import {TailwindElement} from "../shared/tailwind.element";
 import {customElement, property, state} from "lit/decorators.js";
 import {html, PropertyValues} from "lit";
 import mermaid from "mermaid";
+import {XYChartThemeConfig} from "mermaid/dist/diagrams/xychart/chartBuilder/interfaces";
 
 @customElement("mauwi-bar-chart")
 export class BarChart extends TailwindElement() {
+  @property() height: number = 250;
+  @property() yAxisTitle: string = "Revenue (in $)";
+  @property() textAndPlotColor: string = "rgb(17 24 39)";
   @property() octoberRevenue: number = 8500;
   @property() novemberRevenue: number = 7000;
   @property() decemberRevenue: number = 6000;
+
+  private themeVariables: XYChartThemeConfig = {
+    backgroundColor: null,
+    titleColor: this.textAndPlotColor,
+    xAxisLabelColor: this.textAndPlotColor,
+    xAxisLineColor: this.textAndPlotColor,
+    xAxisTickColor: this.textAndPlotColor,
+    xAxisTitleColor: this.textAndPlotColor,
+    yAxisLabelColor: this.textAndPlotColor,
+    yAxisLineColor: this.textAndPlotColor,
+    yAxisTickColor: this.textAndPlotColor,
+    yAxisTitleColor: this.textAndPlotColor,
+    plotColorPalette: this.textAndPlotColor
+  };
 
   private parser = new DOMParser();
   @state() svg: HTMLElement;
 
   private getXyChartDefinition = (oct: number, nov: number, dec: number) => {
-    return `xychart-beta
-    title "Sales Revenue"
-    x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
-    y-axis "Revenue (in $)" 0 --> 11000
-    bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, ${this.isNumber(oct)}, ${this.isNumber(nov)}, ${this.isNumber(dec)}]`;
+    return `
+    %%{init: { "themeVariables": {"xyChart": ${JSON.stringify(this.themeVariables)} } }}%%
+    xychart-beta
+        title "Sales Revenue"
+        x-axis [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+        y-axis "${this.yAxisTitle}" 0 --> 12000
+        bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, ${this.isNumber(oct)}, ${this.isNumber(nov)}, ${this.isNumber(dec)}]
+    `;
   }
 
   private isNumber = (input: any) => {
@@ -29,9 +50,17 @@ export class BarChart extends TailwindElement() {
     mermaid.initialize({
       startOnLoad: true,
       xyChart: {
-        height: 250,
+        height: this.height,
         showTitle: false,
-      }
+        xAxis: {
+          showAxisLine: false,
+          showTick: false,
+        },
+        yAxis: {
+          showAxisLine: false,
+          showTick: false,
+        },
+      },
     });
   }
 
