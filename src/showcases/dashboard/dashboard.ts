@@ -2,6 +2,7 @@ import {customElement, property} from "lit/decorators.js";
 import {TailwindElement} from "../../shared/tailwind.element";
 import {html} from "lit";
 import "../../bar-chart/bar-chart"
+import "../../tabs/tabs";
 
 export interface DashboardProps {
 }
@@ -15,26 +16,8 @@ export class Dashboard extends TailwindElement() {
       <div class="mx-auto max-w-7xl">
         <h1 class="text-4xl font-bold text-gray-800">Dashboard</h1>
 
-        <div class="mt-12">
-          <div class="sm:hidden">
-            <label for="tabs" class="sr-only">Select a tab</label>
-            <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
-            <select id="tabs" name="tabs"
-                    class="block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500">
-              <option selected>Overview</option>
-              <option>Analytics</option>
-              <option>Reports</option>
-              <option>Notifications</option>
-            </select>
-          </div>
-          <div class="hidden sm:block">
-            <nav class="flex space-x-2" aria-label="Tabs">
-              <a href="#" class="bg-indigo-100 text-indigo-700 rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Overview</a>
-              <a href="#" class="text-gray-500 hover:text-indigo-700 rounded-md px-3 py-2 text-sm font-medium hover:bg-indigo-50">Analytics</a>
-              <a href="#" class="text-gray-500 hover:text-indigo-700 rounded-md px-3 py-2 text-sm font-medium hover:bg-indigo-50">Reports</a>
-              <a href="#" class="text-gray-500 hover:text-indigo-700 rounded-md px-3 py-2 text-sm font-medium hover:bg-indigo-50">Notifications</a>
-            </nav>
-          </div>
+        <div class="mt-16">
+          <mauwi-tabs .options=${["Overview", "Analytics", "Reports", "Notifications"]}></mauwi-tabs>
         </div>
 
         <div class="flex flex-row mt-6 gap-8">
