@@ -47,20 +47,23 @@ export class MultiPageForm extends TailwindElement(style) {
     return listElements;
   }
 
-    private getCompletedStep = (step: number) => {
-      return html`
-          <li class="relative ${step === this.numberPages ? '' : 'pr-8 sm:pr-20'}">
-          <div class="absolute inset-0 flex items-center" aria-hidden="true">
-              <div class="h-0.5 w-full bg-indigo-600"></div>
-          </div>
-          <a href="#" class="relative flex h-8 w-8 items-center justify-center rounded-full bg-indigo-600 hover:bg-indigo-900">
-              <svg class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-              </svg>
-              <span class="sr-only">Step ${step}</span>
-          </a>
-          </li>`;
-    }
+  private getCompletedStep = (step: number) => {
+    return html`
+      <li class="relative ${step === this.numberPages ? '' : 'pr-8 sm:pr-20'}">
+        <div class="absolute inset-0 flex items-center" aria-hidden="true">
+          <div class="h-0.5 w-full bg-indigo-600"></div>
+        </div>
+        <a href="#"
+           class="relative flex h-8 w-8 items-center justify-center rounded-full bg-indigo-600 hover:bg-indigo-900">
+          <svg class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"/>
+          </svg>
+          <span class="sr-only">Step ${step}</span>
+        </a>
+      </li>`;
+  }
 
     private getCurrentStep = (step: number) => {
       return html`
@@ -246,30 +249,35 @@ export class MultiPageForm extends TailwindElement(style) {
 
           ${this.renderProgessNav(this.numberPages, this.currentPage)}
 
-          ${this.currentPage === 1 ? this.renderPage(1) : nothing}
-          ${this.currentPage === 2 ? this.renderPage(2) : nothing}
-          ${this.currentPage === 3 ? this.renderPage(3) : nothing}
-          ${this.currentPage === 4 ? this.renderPage(4) : nothing}
+          <form>
+            ${this.currentPage === 1 ? this.renderPage(1) : nothing}
+            ${this.currentPage === 2 ? this.renderPage(2) : nothing}
+            ${this.currentPage === 3 ? this.renderPage(3) : nothing}
+            ${this.currentPage === 4 ? this.renderPage(4) : nothing}
 
-          <nav class="flex items-center justify-between border-t border-gray-200 pt-3" aria-label="Pagination">
-            <div class="flex flex-1 ${this.currentPage === 1 ? 'justify-end' : 'justify-between'}">
-              ${
-                this.currentPage !== 1 
-                        ? html`<button @click="${this.previousPage}" class="btn btn-tertiary">Previous</button>`
-                        : nothing
-              }
-              ${
-                this.currentPage !== this.numberPages 
-                        ? html`<button @click="${this.nextPage}" class="btn btn-tertiary">Next</button>`
-                        : nothing
-              }
-              ${
-                this.currentPage === this.numberPages 
-                        ? html`<button class="btn btn-primary">Submit</button>` 
-                        : nothing
-              }
-            </div>
-          </nav>
+            <nav class="flex items-center justify-between border-t border-gray-200 pt-3" aria-label="Pagination">
+              <div class="flex flex-1 ${this.currentPage === 1 ? 'justify-end' : 'justify-between'}">
+                ${
+                  this.currentPage !== 1
+                    ? html`
+                      <button @click="${this.previousPage}" class="btn btn-tertiary">Previous</button>`
+                    : nothing
+                }
+                ${
+                  this.currentPage !== this.numberPages
+                    ? html`
+                      <button @click="${this.nextPage}" class="btn btn-tertiary">Next</button>`
+                    : nothing
+                }
+                ${
+                  this.currentPage === this.numberPages
+                    ? html`
+                      <button class="btn btn-primary">Submit</button>`
+                    : nothing
+                }
+              </div>
+            </nav>
+          </form>
 
         </div>
       </div>
