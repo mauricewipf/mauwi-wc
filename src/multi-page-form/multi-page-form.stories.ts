@@ -7,19 +7,25 @@ export default {
   title: 'components/MultiPageForm',
   tags: ['autodocs'],
   render: (args) => html`
-    <mauwi-multi-page-form/>
+    <div class="flex flex-row">
+      <div class="basis-1/2">
+        <mauwi-multi-page-form/>
+        <script>
+          document.getElementsByTagName("mauwi-multi-page-form")[0].addEventListener("submitted", (e) => {
+            document.getElementById("output").innerText = JSON.stringify(e.target.data, null, '\t');
+          })
+        </script>
+      </div>
+      <div class="basis-1/2">
+        <div class="bg-gray-900 rounded-2xl text-gray-300 font-mono">
+          <div class="p-6">
+            <p>Output:</p>
+            <span id="output">[Placeholder]</span>
+          </div>
+        </div>
+      </div>
+    </div>
   `,
-  parameters: {
-    backgrounds: {
-      default: 'darkgrey',
-      values: [
-        {
-          name: 'darkgrey',
-          value: '#444',
-        },
-      ],
-    },
-  },
 } satisfies Meta<MultiPageFormProps>;
 
 export const Default: StoryObj<MultiPageFormProps> = {
