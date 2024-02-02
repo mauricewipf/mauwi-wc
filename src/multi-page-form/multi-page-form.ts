@@ -283,10 +283,10 @@ export class MultiPageForm extends TailwindElement(style) {
           ${this.renderProgessNav(this.numberPages, this.currentPage)}
 
           <form @submit=${this._onSubmit}>
-            ${this.currentPage === 1 ? this.renderPage(1) : nothing}
-            ${this.currentPage === 2 ? this.renderPage(2) : nothing}
-            ${this.currentPage === 3 ? this.renderPage(3) : nothing}
-            ${this.currentPage === 4 ? this.renderPage(4) : nothing}
+            <div class="${this.currentPage === 1 ? '' : 'hidden'}">${this.renderPage(1)}</div>
+            <div class="${this.currentPage === 2 ? '' : 'hidden'}">${this.renderPage(2)}</div>
+            <div class="${this.currentPage === 3 ? '' : 'hidden'}">${this.renderPage(3)}</div>
+            <div class="${this.currentPage === 4 ? '' : 'hidden'}">${this.renderPage(4)}</div>
 
             <nav class="flex items-center justify-between border-t border-gray-200 pt-3" aria-label="Pagination">
               <div class="flex flex-1 ${this.currentPage === 1 ? 'justify-end' : 'justify-between'}">
