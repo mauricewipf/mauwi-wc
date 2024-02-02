@@ -1,7 +1,7 @@
 import {Meta, StoryObj} from '@storybook/web-components';
 import {html} from "lit";
-import "./Dashboard";
-import {DashboardProps} from "./Dashboard";
+import "./dashboard";
+import {DashboardProps} from "./dashboard";
 
 export default {
   title: 'showcase/Dashboard',
