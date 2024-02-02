@@ -293,13 +293,13 @@ export class MultiPageForm extends TailwindElement(style) {
                 ${
                   this.currentPage !== 1
                     ? html`
-                      <button @click="${this.previousPage}" class="btn btn-tertiary">Previous</button>`
+                      <button @click="${this.previousPage}" class="btn btn-tertiary" type="button">Previous</button>`
                     : nothing
                 }
                 ${
                   this.currentPage !== this.numberPages
                     ? html`
-                      <button @click="${this.nextPage}" class="btn btn-tertiary">Next</button>`
+                      <button @click="${this.nextPage}" class="btn btn-tertiary" type="button">Next</button>`
                     : nothing
                 }
                 ${
