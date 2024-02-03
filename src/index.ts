@@ -8,3 +8,4 @@ export { PersonalInformationForm } from './personal-information-form/personal-in
 export { Accordion } from './accordion/accordion';
 export { Datepicker } from './datepicker/datepicker'
 export { Carousel } from './carousel/carousel';
+export { DataTable } from './data-table/data-table';
