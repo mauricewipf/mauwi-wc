@@ -1,3 +1,5 @@
+[![Build and Publish Storybook to GitHub Pages](https://github.com/mauricewipf/mauwi-wc/actions/workflows/deploy-github-pages.yaml/badge.svg)](https://github.com/mauricewipf/mauwi-wc/actions/workflows/deploy-github-pages.yaml)
+
 # mauwi-wc (Web Components)
 
 ## Installation
