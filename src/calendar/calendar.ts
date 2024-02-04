@@ -157,13 +157,13 @@ export class Calendar extends TailwindElement() {
           </button>
         </div>
         <div class="mt-6 grid grid-cols-7 text-center text-xs leading-6 text-gray-500">
-          <div>M</div>
-          <div>T</div>
-          <div>W</div>
-          <div>T</div>
-          <div>F</div>
-          <div>S</div>
-          <div>S</div>
+          <div>Mo</div>
+          <div>Tu</div>
+          <div>We</div>
+          <div>Th</div>
+          <div>Fr</div>
+          <div>Sa</div>
+          <div>Su</div>
         </div>
 
         <div

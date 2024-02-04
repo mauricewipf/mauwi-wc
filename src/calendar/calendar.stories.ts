@@ -8,6 +8,12 @@ export default {
   tags: ['autodocs'],
   render: (args) => html`
     <mauwi-calendar></mauwi-calendar>
+    <p class="mt-16">Selected date: <span id="selected-date"></span></p>
+    <script>
+      document.querySelector("mauwi-calendar").addEventListener("dateSelected", (e) => {
+        document.getElementById("selected-date").innerText = new Date(e.detail.date).toDateString();
+      })
+    </script>
   `,
 } satisfies Meta<CalendarProps>;
 
