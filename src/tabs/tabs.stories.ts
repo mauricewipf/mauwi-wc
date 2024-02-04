@@ -20,12 +20,10 @@ export const Default: StoryObj<TabsProps> = {
 };
 
 export const SmallScreen: StoryObj<TabsProps> = {
+  ...Default,
   parameters: {
     viewport: {
       defaultViewport: 'iphone5',
     },
-  },
-  args: {
-    options: ["Overview", "Analytics", "Reports", "Notifications"],
   },
 };
