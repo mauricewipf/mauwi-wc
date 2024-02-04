@@ -11,7 +11,7 @@ export default {
       <div class="basis-1/2">
         <mauwi-multi-page-form/>
         <script>
-          document.getElementsByTagName("mauwi-multi-page-form")[0].addEventListener("submitted", (e) => {
+          document.querySelector("mauwi-multi-page-form").addEventListener("submitted", (e) => {
             document.getElementById("output").innerText = JSON.stringify(e.target.data, null, '\t');
           })
         </script>

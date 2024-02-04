@@ -8,7 +8,7 @@ export default {
   tags: ['autodocs'],
   render: (args) => html`
     <div class="h-64">
-      <button type="button" @click=${() => document.getElementsByTagName("mauwi-dialog")[0].toggle()}> Toggle dialog</button>
+      <button type="button" @click=${() => document.querySelector("mauwi-dialog").toggle()}> Toggle dialog</button>
       <mauwi-dialog
         .headline="${args.headline}"
         .text="${args.text}"

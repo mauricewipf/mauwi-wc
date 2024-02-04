@@ -154,7 +154,7 @@
 <div class="p-5">
     <mauwi-carsharing-availability headline="Temp" weekdays = "['MON', 'TUE', 'THU', 'SUN']"></mauwi-carsharing-availability>
     <script>
-        document.getElementsByTagName("mauwi-carsharing-availability")[0].hours = {from: 7, to: 19};
+        document.querySelector("mauwi-carsharing-availability").hours = {from: 7, to: 19};
     </script>
 </div>
 
@@ -180,7 +180,7 @@
     ></mauwi-bar-chart>
     <script>
         function updateBarChart(event) {
-            document.getElementsByTagName("mauwi-bar-chart")[0]["decemberRevenue"]=event.target.value;
+            document.querySelector("mauwi-bar-chart")["decemberRevenue"]=event.target.value;
         }
     </script>
 </div>
@@ -188,7 +188,7 @@
 <div class="p-5">
     <mauwi-personal-information-form></mauwi-personal-information-form>
     <script>
-        document.getElementsByTagName("mauwi-personal-information-form")[0].addEventListener('submitted', (event) => {
+        document.querySelector("mauwi-personal-information-form").addEventListener('submitted', (event) => {
             document.getElementById("personal-information-form-output").innerText = JSON.stringify(event.target.data);
         });
     </script>

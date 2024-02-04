@@ -11,7 +11,7 @@ export default {
         <mauwi-personal-information-form
         ></mauwi-personal-information-form>
         <script>
-          document.getElementsByTagName("mauwi-personal-information-form")[0].addEventListener("submitted", (e) => {
+          document.querySelector("mauwi-personal-information-form").addEventListener("submitted", (e) => {
             document.getElementById("output").innerText = JSON.stringify(e.target.data, null, '\t');
           })
         </script>
