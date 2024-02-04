@@ -1,6 +1,6 @@
 import {Meta, StoryObj} from '@storybook/web-components';
 import {html} from "lit";
-import "./Calendar";
+import "./calendar";
 import {CalendarProps} from "./Calendar";
 
 export default {
