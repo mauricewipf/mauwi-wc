@@ -63,18 +63,18 @@ export class Carousel extends TailwindElement() {
   private renderImage(imageUrl: string, index: number) {
     return html`
       <div
-        class=${`absolute h-full duration-700 ease-in-out ${this.currentPage === index ? '' : this.translates[index].translate}  w-full rounded-lg bg-cover bg-no-repeat bg-center`}
-        style=${`background-image: url(${imageUrl});`}>
+        class="absolute h-full duration-700 ease-in-out ${this.currentPage === index ? '' : this.translates[index].translate} w-full rounded-lg bg-cover bg-no-repeat bg-center"
+        style="background-image: url(${imageUrl});">
       </div>`;
   }
   protected render() {
     return html`
       <div class="flex items-center">
-        <div class=${`justify-end mr-3 ${this.currentPage === 0 ? 'invisible' : ''}`} @click=${this._onPreviousClick}>${arrowLeftIcon}</div>
-        <div class=${`flex-1 aspect-${this.aspectRatio} flex justify-center shadow-lg rounded-lg relative overflow-hidden`}>
+        <div class="justify-end mr-3 ${this.currentPage === 0 ? 'invisible' : ''}" @click=${this._onPreviousClick}>${arrowLeftIcon}</div>
+        <div class="flex-1 aspect-${this.aspectRatio} flex justify-center shadow-lg rounded-lg relative overflow-hidden">
           ${this.images.map((image, index) => this.renderImage(image, index))}
         </div>
-        <div class=${`justify-start ml-3 ${this.currentPage === this.images.length-1 ? 'invisible' : ''}`} @click=${this._onNextClick}>${arrowRightIcon}</div>
+        <div class="justify-start ml-3 ${this.currentPage === this.images.length-1 ? 'invisible' : ''}" @click=${this._onNextClick}>${arrowRightIcon}</div>
       </div>
     `;
 

@@ -1,6 +1,6 @@
 import {customElement, property, state} from "lit/decorators.js";
 import {TailwindElement} from "../shared/tailwind.element";
-import {html} from "lit";
+import {html, nothing} from "lit";
 import {checkIcon, chevronUpDownIcon} from "../shared/icons";
 
 type ComboboxItem = {primaryText: string, secondaryText: string};
@@ -51,13 +51,13 @@ export class Combobox extends TailwindElement() {
           tabindex="-1" 
           @click=${() => this._onSelect(item)}>
         <div class="flex text-gray-900 group-hover:text-white">
-          <span class=${`truncate ${ isSelectedItem ? 'font-semibold' : ''}`}>${item.primaryText}</span>
+          <span class="truncate ${ isSelectedItem ? 'font-semibold' : ''}">${item.primaryText}</span>
           <span class="ml-2 truncate text-gray-500 group-hover:text-indigo-200">${item.secondaryText}</span>
         </div>
 
         ${isSelectedItem
-          ? html`<span class=${`absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600 group-hover:text-white`}>${checkIcon}</span>`
-          : null
+          ? html`<span class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600 group-hover:text-white">${checkIcon}</span>`
+          : nothing
         }
       </li>`;
   }
@@ -95,7 +95,7 @@ export class Combobox extends TailwindElement() {
                   .filter(this.filterList)
                   .map((item: ComboboxItem) => this.renderListElement(item))}
               </ul>` 
-            : null
+            : nothing
           }
         </div>
       </div>

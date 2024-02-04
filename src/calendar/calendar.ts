@@ -55,10 +55,10 @@ export class Calendar extends TailwindElement() {
 
     return html`
       <button type="button"
-              class=${`py-1.5 hover:bg-gray-100 focus:z-10 ${isThisMonth ? 'bg-white' : 'bg-gray-50'} ${textColor}`}
+              class="py-1.5 hover:bg-gray-100 focus:z-10 ${isThisMonth ? 'bg-white' : 'bg-gray-50'} ${textColor}"
               @click=${() => this._onSelectDay(date)}>
         <time datetime=${formattedDate}
-              class=${`mx-auto flex h-7 w-7 items-center justify-center rounded-full ${isSelectedDate ? 'bg-gray-900' : ''}`}
+              class="mx-auto flex h-7 w-7 items-center justify-center rounded-full ${isSelectedDate ? 'bg-gray-900' : ''}"
         >${date.getDate()}
         </time>
       </button>`;
@@ -167,7 +167,7 @@ export class Calendar extends TailwindElement() {
         </div>
 
         <div
-          class=${`isolate mt-2 grid grid-cols-7 gap-px rounded-lg bg-gray-200 text-sm shadow ring-1 ring-gray-200 [&>*:nth-child(1)]:rounded-tl-lg [&>*:nth-child(7)]:rounded-tr-lg [&>*:nth-child(${days.length - 6})]:rounded-bl-lg [&>*:last-child]:rounded-br-lg`}>
+          class="isolate mt-2 grid grid-cols-7 gap-px rounded-lg bg-gray-200 text-sm shadow ring-1 ring-gray-200 [&>*:nth-child(1)]:rounded-tl-lg [&>*:nth-child(7)]:rounded-tr-lg [&>*:nth-child(${days.length - 6})]:rounded-bl-lg [&>*:last-child]:rounded-br-lg">
           ${days.map((day) => this.renderDay(day))}
         </div>
       </div>

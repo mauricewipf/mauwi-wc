@@ -39,7 +39,7 @@ export class Tabs extends TailwindElement() {
         <nav class="flex space-x-2" aria-label="Tabs">
           ${this.options.map((option) => html`
             <a href="#" 
-               class=${`rounded-md px-3 py-2 text-sm font-medium ${option === this.selectedOption ? 'bg-indigo-100 text-indigo-700' : 'text-gray-500 hover:text-indigo-700 hover:bg-indigo-50'}`} 
+               class="rounded-md px-3 py-2 text-sm font-medium ${option === this.selectedOption ? 'bg-indigo-100 text-indigo-700' : 'text-gray-500 hover:text-indigo-700 hover:bg-indigo-50'}"
                aria-current="page" 
                data-value=${option}
                @click=${this._onSelect}>${option}</a>`
