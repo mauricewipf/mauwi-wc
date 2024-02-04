@@ -9,8 +9,7 @@ export default {
   render: (args) => html`
     <div class="flex flex-row items-center">
       <div class="basis-1/2">
-        <mauwi-datepicker
-        ></mauwi-datepicker>
+        <mauwi-datepicker></mauwi-datepicker>
       </div>
       <div class="basis-1/2">
         <div>
@@ -20,7 +19,7 @@ export default {
     </div>
     <script>
       document.querySelector("mauwi-datepicker").addEventListener("dateSelected", (e) => {
-        document.getElementById("selected-date").innerText = new Date(e.target.selectedDate).toDateString();
+        document.getElementById("selected-date").innerText = new Date(e.detail.date).toDateString();
       })
     </script>
   `,

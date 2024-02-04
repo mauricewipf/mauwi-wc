@@ -6,6 +6,7 @@ export { CarsharingAvailability } from './carsharing-availability/carsharing-ava
 export { BarChart } from './bar-chart/bar-chart';
 export { PersonalInformationForm } from './personal-information-form/personal-information-form';
 export { Accordion } from './accordion/accordion';
+export { Calendar } from './calendar/calendar'
 export { Datepicker } from './datepicker/datepicker'
 export { Carousel } from './carousel/carousel';
 export { DataTable } from './data-table/data-table';
