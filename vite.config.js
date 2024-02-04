@@ -23,6 +23,7 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
                         'carsharing-availability': 'src/carsharing-availability/index.ts',
                         'bar-chart': 'src/bar-chart/index.ts',
                         'personal-information-form': 'src/personal-information-form/index.ts',
+                        // Add
                     },
                     output: {
                         entryFileNames: `entry-[name].js`,

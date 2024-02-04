@@ -30,6 +30,19 @@ export { MyElement } from './my-element/my-element';
 
 ## Integration
 
+### In CMS like Wordpress, Drupal and alike
+
+Add a **Custom HTML** block to your page with the following lines of code:
+
+```html
+<script type="module" src="https://unpkg.com/@mauwi-org/mauwi-wc/dist/entry-index.js"></script>
+
+<!-- The custom web component you want to insert -->
+<mauwi-calendar></mauwi-calendar>
+```
+
+![Wordpress Editor](./src/stories/assets/integrate-with-wordpress.png)
+
 ### In HTML via CDN
 
 ```html
