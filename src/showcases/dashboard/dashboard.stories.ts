@@ -4,7 +4,7 @@ import "./dashboard";
 import {DashboardProps} from "./dashboard";
 
 export default {
-  title: 'showcase/Dashboard',
+  title: 'showcases/Dashboard',
   tags: ['autodocs'],
   render: (args) => html`
     <mauwi-dashboard

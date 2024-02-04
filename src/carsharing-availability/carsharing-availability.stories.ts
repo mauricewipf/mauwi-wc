@@ -4,7 +4,7 @@ import './carsharing-availability';
 import {html} from "lit";
 
 export default {
-  title: 'components/CarsharingAvailability',
+  title: 'showcases/CarsharingAvailability',
   tags: ['autodocs'],
   render: (args) => html`
     <mauwi-carsharing-availability 

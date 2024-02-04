@@ -4,7 +4,7 @@ import {html} from "lit";
 import "./mega-flyout";
 
 export default {
-  title: 'components/MegaFlyout',
+  title: 'showcases/MegaFlyout',
   tags: ['autodocs'],
   render: (args: MegaFlyoutProps) => html`
     <mauwi-mega-flyout
