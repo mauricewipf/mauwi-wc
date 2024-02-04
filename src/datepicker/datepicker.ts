@@ -54,7 +54,6 @@ export class Datepicker extends TailwindElement() {
     }
 
     return html`
-      <!-- TODO: Add rounded-tl-lg  for corner left-top -->
       <button type="button"
               class=${`py-1.5 hover:bg-gray-100 focus:z-10 ${isThisMonth ? 'bg-white' : 'bg-gray-50'} ${textColor}`} 
               @click=${() => this._onSelectDay(date)}>
@@ -118,6 +117,7 @@ export class Datepicker extends TailwindElement() {
 
   private _onSelectDay(date: Date) {
     this.selectedDate = date;
+    this.dispatchEvent(new Event('dateSelected'));
   }
 
   protected render() {

@@ -7,8 +7,22 @@ export default {
   title: 'components/Datepicker',
   tags: ['autodocs'],
   render: (args) => html`
-    <mauwi-datepicker
-    ></mauwi-datepicker>
+    <div class="flex flex-row items-center">
+      <div class="basis-1/2">
+        <mauwi-datepicker
+        ></mauwi-datepicker>
+      </div>
+      <div class="basis-1/2">
+        <div>
+          <p>Selected Date: <span id="selected-date"></span></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.querySelector("mauwi-datepicker").addEventListener("dateSelected", (e) => {
+        document.getElementById("selected-date").innerText = new Date(e.target.selectedDate).toDateString();
+      })
+    </script>
   `,
 } satisfies Meta<DatepickerProps>;
 
