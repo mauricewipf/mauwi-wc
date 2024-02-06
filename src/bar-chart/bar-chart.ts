@@ -52,7 +52,7 @@ export class BarChart extends TailwindElement() {
     xychart-beta
         title "${this.chartTitle || null}"
         x-axis [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
-        y-axis "${this.yAxisTitle}" 0 --> 12000
+        y-axis "${this.yAxisTitle || ''}" 0 --> 12000
         bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, ${this.isNumber(oct)}, ${this.isNumber(nov)}, ${this.isNumber(dec)}]
     `;
   }

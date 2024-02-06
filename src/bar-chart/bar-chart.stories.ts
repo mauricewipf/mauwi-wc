@@ -31,3 +31,13 @@ export const Default: StoryObj<BarChartProps> = {
     decemberRevenue: 10000,
   },
 };
+export const WithoutYAxisTitle: StoryObj<BarChartProps> = {
+  args: {
+    height: 400,
+    backgroundColor: "rgb(248 250 252)",
+    textAndPlotColor: "rgb(17 24 39)",
+    octoberRevenue: 8500,
+    novemberRevenue: 7000,
+    decemberRevenue: 10000,
+  },
+};
