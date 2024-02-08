@@ -2,6 +2,8 @@
 
 # mauwi-wc (Web Components)
 
+This UI Components Library is based on the Open Web Standard [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components). It is built with [Lit Elements](https://lit.dev). It is inspired by [shadcn UI](https://ui.shadcn.com/).
+
 ## Installation
 
 `npm install`
