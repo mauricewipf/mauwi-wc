@@ -3,7 +3,7 @@ import {html} from "lit";
 import "./personal-information-form";
 
 export default {
-  title: 'components/PersonalInformationForm',
+  title: 'showcases/PersonalInformationForm',
   tags: ['autodocs'],
   render: (args) => html`
     <div class="flex flex-row gap-x-4 items-end">
