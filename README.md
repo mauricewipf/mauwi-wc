@@ -2,7 +2,7 @@
 
 # mauwi-wc (Web Components)
 
-This UI Components Library is based on the Open Web Standard [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components). It is built with [Lit Elements](https://lit.dev). It is inspired by [shadcn UI](https://ui.shadcn.com/).
+mauwi-wc is a UI Components Library to build customizable websites and web applications. It is based on the Open Web Standard [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) and is built with [Lit Elements](https://lit.dev).
 
 ## Installation
 
@@ -134,4 +134,5 @@ export const MauwiElementComponent = createComponent({
 
 ## Further reading
 
-- Project based on: [butopen/web-components-tailwind-starter-kit](https://github.com/butopen/web-components-tailwind-starter-kit)
+- Inspired by [shadcn UI](https://ui.shadcn.com/)
+- Based on: [butopen/web-components-tailwind-starter-kit](https://github.com/butopen/web-components-tailwind-starter-kit)
