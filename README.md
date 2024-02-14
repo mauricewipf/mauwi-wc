@@ -2,11 +2,12 @@
 
 # mauwi-wc (Web Components)
 
-mauwi-wc is a UI Components Library to build customizable websites and web applications. It is based on the Open Web Standard [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) and is built with [Lit Elements](https://lit.dev).
+mauwi-wc is an Open Source UI Component Library to build customizable websites and web applications. It is based on the Open Web Standard [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) and is built with [Lit Elements](https://lit.dev).
 
 ## Installation
 
-`npm install`
+1. Clone project from GitHub: https://github.com/mauricewipf/mauwi-wc
+2. `npm install`
 
 ## How to create a new component
 
